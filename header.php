@@ -18,7 +18,7 @@
                         <img src="IMG/logo-small.png">
                     </a>
                 </li>
-                <li><a href="work.php">WORK</a></li>
+                <li><a href="work.php">PROJETS</a></li>
                 <li><a href="IMG/Pierre-Cazeaud-CV.pdf" target="_blank">CV</a></li>
                 <li><a href="contact.php">CONTACT</a></li>
             </ul>
