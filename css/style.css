@@ -333,10 +333,6 @@ body {
 		color: #ecf1f4;
 	}
 
-	#projets #bloc2 img {
-		background-color: #ecf1f4;
-	}
-
 	.bloc a img {
 		opacity: 1;
 		-webkit-transition: opacity 0.5s; /* Safari */
@@ -522,6 +518,7 @@ body {
 	width: 100%;
 	display: block;
 	margin: 5px auto;
+	background-color: #ecf1f4;
 }
 
 .FB-couv {
