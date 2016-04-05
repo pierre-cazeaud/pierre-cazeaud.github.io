@@ -109,7 +109,7 @@ body {
 	width: 30px;
 	height :30px;
 	padding:10px 0px 10px 10px; 
-	background-image:url(IMG/navburger.png); 
+	background-image:url(/IMG/navburger.png); 
 	background-repeat:no-repeat; 
 	background-position:100% 10px; 
 	cursor: pointer;
