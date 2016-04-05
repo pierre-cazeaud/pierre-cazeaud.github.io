@@ -212,7 +212,7 @@ body {
 		margin-bottom: 0;
 		margin-top: 0;
 		line-height: 1.5em;
-		font-size: 1.1em;
+		font-size: 1.08em;
 	}
 
 	.index-titre h2 {
@@ -220,7 +220,7 @@ body {
 		font-size: 1em;
 		font-weight: lighter;
 		margin-top: 0;
-		font-size: 0.8em;
+		font-size: 0.65em;
 	}
 
 .index-ligne {
@@ -258,6 +258,17 @@ body {
 	overflow: hidden;
 }
 
+	.index-wrapper a {
+		opacity: 1;
+		-webkit-transition: opacity 0.5s; /* Safari */
+		transition: opacity 0.5s;
+	}
+	.index-wrapper a:hover {
+		opacity: 0.5;
+		-webkit-transition: opacity 0.5s; /* Safari */
+		transition: opacity 0.5s;
+	}
+
 #img-work{
 	position: absolute;
     top: 0;
@@ -285,11 +296,11 @@ body {
 
 @media (min-width : 768px) {
 	.index-titre h1 {
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 
 	.index-titre h2 {
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 }
 
