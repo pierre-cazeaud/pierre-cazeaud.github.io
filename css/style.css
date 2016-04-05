@@ -333,6 +333,10 @@ body {
 		color: #ecf1f4;
 	}
 
+	#projets #bloc2 img {
+		background-color: #ecf1f4;
+	}
+
 	.bloc a img {
 		opacity: 1;
 		-webkit-transition: opacity 0.5s; /* Safari */
