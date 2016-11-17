@@ -1,0 +1,11 @@
+		<footer>
+			
+		</footer>
+
+		<!-- Scripts -->
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/scripts.js" type="text/javascript"></script>
+		<!-- Swiper JS -->
+    	<script src="js/swiper.min.js"></script>
+	</body>
+</html>

@@ -1,161 +1,178 @@
-/************
-GLOBAL STYLES
-************/
+/******
+Banners
+******/
+.banner { position: relative; text-align: center; margin-top: 40px; height: 200px; margin-bottom: 50px; }
+.banner h1 { margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; }
 
-html {
-	background-color: #ecf1f4;
-	font-family: 'Raleway', sans-serif;
-}
+@media (min-width: 769px) { .banner { margin-top: 0; height: 250px; } }
+/***********
+Home banner
+***********/
+#home-banner { background: url(../img/banner-home-sm.jpg) center center no-repeat; background-size: cover; height: 300px; padding: 50px 10px; }
+#home-banner h1 { position: relative; top: 0; left: 0; transform: translate(0, 0); font-weight: 900; margin: 0px 0 10px; }
+#home-banner h2 { font-size: 1em; }
+#home-banner p { color: #fff; }
 
-body {
-	margin: 0;
-}
+@media (min-width: 769px) { #home-banner { background: url(../img/banner-home-lg.jpg) center center no-repeat; height: 800px; padding: 300px 10px; }
+  #home-banner h1 { font-size: 3em; }
+  #home-banner h2 { font-size: 1.2em; } }
+/***********
+Works banner
+***********/
+#works-banner { background: url(../img/banner-works-sm.jpg) center center no-repeat; }
+#works-banner h1 { color: #2b2d42; }
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
+@media (min-width: 769px) { #works-banner { background: url(../img/banner-works-md.jpg) center center no-repeat; } }
+@media (min-width: 1200px) { #works-banner { background: url(../img/banner-works-lg.jpg) center center no-repeat; } }
+/********************************************
+					MENU
+********************************************/
+#menu { text-align: left; background-color: #2b2d42; width: 100%; position: fixed; top: 0; left: 0; z-index: 9999; height: 40px; /* Class toggled by jQuery for menu navburger animation */ }
+#menu a { text-decoration: none; color: #fff; }
+#menu #navburger { display: inline-block; background: #d80d2a; width: 40px; height: 40px; text-align: center; cursor: pointer; }
+#menu #navburger span { background: #fff; display: block; position: absolute; width: 24px; height: 2px; margin: 0 8px; opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .25s ease-in-out; transition: .25s ease-in-out; }
+#menu #navburger span:nth-child(1) { top: 11px; }
+#menu #navburger span:nth-child(2) { top: 19px; }
+#menu #navburger span:nth-child(3) { top: 27px; }
+#menu #navburger.toggled-nav span { top: 19px; }
+#menu #navburger.toggled-nav span:nth-child(1) { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+#menu #navburger.toggled-nav span:nth-child(2) { opacity: 0; }
+#menu #navburger.toggled-nav span:nth-child(3) { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+#menu #my-name { position: absolute; width: 100%; top: 50%; transform: translateY(-50%); text-align: center; text-transform: uppercase; color: #fff; font-weight: 700; }
+#menu #my-name a { margin: 0; }
+#menu ul { width: 100%; position: relative; top: -4px; padding: 0; margin: 0; height: 0; }
+#menu ul li { display: block; position: relative; right: 100%; background-color: #2b2d42; width: 100%; padding: 25px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
+#menu ul li:first-child { border-top: 1px solid rgba(255, 255, 255, 0.1); -webkit-transition: right 0.1s ease-in-out; transition: right 0.1s ease-in-out; }
+#menu ul li:nth-child(2) { -webkit-transition: right 0.2s ease-in-out; transition: right 0.2s ease-in-out; }
+#menu ul li:nth-child(3) { -webkit-transition: right 0.3s ease-in-out; transition: right 0.3s ease-in-out; }
+#menu ul li:last-child { border: 0; -webkit-transition: right 0.4s ease-in-out; transition: right 0.4s ease-in-out; }
 
-.clear {
-	float:none;
-	margin: 0;
-	clear:both;
-}
+/* Class toggled by jQuery for menu items */
+.active-item { right: 0 !important; }
 
-.container {
-	padding-left: 15px;
-	padding-right: 15px;
-	margin: 0 auto;
-}
+/**************
+Menu on desktop
+**************/
+@media (min-width: 769px) { #menu { width: 340px; top: 100px; height: 50px; /* Class toggled by jQuery for menu navburger animation */ }
+  #menu #navburger { height: 50px; width: 50px; }
+  #menu #navburger span { margin: 0 13px; }
+  #menu #navburger span:nth-child(1) { top: 16px; }
+  #menu #navburger span:nth-child(2) { top: 24px; }
+  #menu #navburger span:nth-child(3) { top: 32px; }
+  #menu #navburger.toggled-nav span { top: 24px; }
+  #menu #my-name { position: absolute; width: calc(100% - 50px); top: 50%; left: 50px; transform: translateY(-50%); } }
+/********************************************
+				GLOBAL STYLES
+********************************************/
+html { font-family: 'Raleway', sans-serif; }
 
-@media (min-width: 768px) {
-	.container {
-    	width: 750px;
-	}
+body { margin: 0; }
 
-@media (min-width: 992px) {
-	.container {
-    	width: 970px;
-	}
-}
-@media (min-width: 1200px) {
-	.container {
-    	width: 1170px;
-	}
-}
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-/****
-MENU
-****/
+.clear { float: none; margin: 0; clear: both; }
 
-#menu {
-	text-align: left;
-    background-color: #2b2d42;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    height: 40px;
-}
+img { display: block; width: 100%; height: auto; }
 
-@media (min-width: 481px) {
-	#menu {
-		width: 250px;
-	}
-}
+a { outline: 0; }
 
-	#menu #navburger {
-		display: inline-block;
-	    background: #d80d2a;
-	    width: 40px;
-	    height: 40px;
-	    text-align: center;
-	    padding: 5px 0;
-	    cursor: pointer;
-	}
+/**************
+Textual content
+**************/
+h1, h2, h3 { text-transform: uppercase; color: #fff; font-weight: 700; }
 
-		#menu #navburger span {
-			background: white;
-			width: 24px;
-			height: 2px;
-			margin: 6px 8px;
-		}
+p { font-size: 0.8em; }
+@media (min-width: 769px) { p { font-size: 1em; } }
 
-	#menu #my-name {
-		display: inline-block;
-		width: calc(100% - 48px);
-		vertical-align: top;
-    	padding: 10.5px 0;
-    	text-transform: uppercase;
-		color: white;
-		text-align: center;
-		font-weight: 700;
-	}
+/******************
+Container & blocks
+*******************/
+.container { padding-left: 15px; padding-right: 15px; margin: 0 auto; text-align: center; }
 
-		#menu #my-name p {
-			margin: 0;
-		}
+@media (min-width: 768px) { .container { width: 750px; } }
+@media (min-width: 992px) { .container { width: 970px; } }
+@media (min-width: 1200px) { .container { width: 1170px; } }
+.main-block { margin: 20px 0; }
 
-#menu ul {
-	width:200px;
-	position: absolute;
-	top: 55px;
-	right: 0px;
-	background-color: #2b2d42;
-	padding: 0;
-	display: none;
-}
-			
-#menu ul li {
-	display: block;
-}
+.main-block-title { margin: 0 0 5px; }
 
-#menu ul li a {
-	text-decoration: none;
-	color : #ecf1f4;
-	font-size: 1.2em; 
-	padding: 10px 0; 
-	display: block;
-}
+.main-block-subtitle { margin: 0; }
 
-#menu ul li a:hover {
-	background-color: #484d6d;
-	font-weight: bold;
-}
+/******
+Buttons
+*******/
+.btn { text-transform: uppercase; text-decoration: none; font-weight: 700; color: #2b2d42; border: 2px solid #2b2d42; padding: 10px 20px; }
+.btn:hover, .btn:focus { background-color: #2b2d42; color: #fff; transition: 0.2s ease-in-out; }
 
-#mobile {
-	display:inline-block; 
-	position:absolute; 
-	top:15px; 
-	right:20px;
-	width: 30px;
-	height :30px;
-	padding:10px 0px 10px 10px; 
-	background-image:url(../img/navburger.png); 
-	background-repeat:no-repeat; 
-	background-position:100% 10px; 
-	cursor: pointer;
-}
+.btn-white { color: #fff; border: 2px solid #fff; }
+.btn-white:hover, .btn-white:focus { background-color: #fff; color: #2b2d42; }
 
+/*****
+Footer
+******/
+footer { background: #2b2d42; height: 40px; margin-top: 20px; }
 
-/***************
-WORK SINGLE PAGE 
-***************/
+/********************************************
+				PAGES STYLES
+********************************************/
+/********
+Home page
+********/
+#home-page #my-works { margin: 40px 0 60px; }
+#home-page #my-works .swiper-container { width: 100%; margin: 20px 0 40px; }
+#home-page #my-works .swiper-slide { background-position: center; background-size: cover; }
+#home-page #my-works .main-block-title { color: #2b2d42; }
+#home-page #my-works img { margin: 30px 0 40px; }
 
-.video {
-  width: 100%;
-  height: auto;
-}
+#contact { background: url(../img/banner-home-contact-sm.jpg) center center no-repeat; background-size: cover; width: 100%; padding: 20px 15px 30px; margin-bottom: -20px; text-align: center; }
+#contact .main-block-subtitle { color: #fff; margin-bottom: 30px; }
 
-.facebook-cover {
-	max-width: 851px;
-	height: 100%; 
-}
+@media (min-width: 769px) { #contact { background: url(../img/banner-home-contact-lg.jpg) center center no-repeat; height: 300px; padding: 70px 15px 30px; }
+  #contact .main-block-subtitle { margin-bottom: 50px; } }
+/*****************
+Works page
+*****************/
+#works-page .work-block { -webkit-box-shadow: -5px 5px 12px 0px rgba(0, 0, 0, 0.16); -moz-box-shadow: -5px 5px 12px 0px rgba(0, 0, 0, 0.16); box-shadow: -5px 5px 12px 0px rgba(0, 0, 0, 0.16); margin-bottom: 40px; position: relative; }
+#works-page .work-block-info { position: absolute; background-color: rgba(255, 255, 255, 0.6); bottom: 0; width: 100%; padding: 10px; }
+#works-page .work-block-info h3 { color: #2b2d42; margin: 0; }
+#works-page .work-block-info h3:last-child { text-transform: none; font-weight: 300; font-size: 1em; }
+#works-page .work-block-info span { display: block; background-color: #2b2d42; height: 1px; margin: 5px auto; width: 100px; }
 
-/*
-red #d80d2a
-blue #2b2d42
-white #ecf1f4
-*/
+@media (min-width: 768px) { #works-page { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+  #works-page .work-block { width: 48%; margin-bottom: 30px; }
+  #works-page .work-block-square { width: 24%; } }
+@media (min-width: 769px) { #works-page .work-block-info { background-color: rgba(0, 0, 0, 0.6); height: 100%; padding: 0; display: flex; flex-direction: column; justify-content: center; opacity: 0; transition: 0.2s ease-in-out; }
+  #works-page .work-block-info h3 { color: #fff; }
+  #works-page .work-block-info h3:last-child { text-transform: uppercase; font-size: 0.9em; }
+  #works-page .work-block-info span { background-color: #fff; margin: 8px auto; width: 60%; }
+  #works-page .work-block-info h3, #works-page .work-block-info span { position: relative; top: 10px; transition: 0.2s ease-in-out; }
+  #works-page .work-block-info:hover, #works-page .work-block-info:focus { opacity: 1; transition: 0.2s ease-in-out; }
+  #works-page .work-block-info:hover h3, #works-page .work-block-info:hover span, #works-page .work-block-info:focus h3, #works-page .work-block-info:focus span { top: 0; transition: 0.2s ease-in-out; } }
+/*****************
+Work single pages
+*****************/
+.single-work header { margin: 70px auto 30px; }
+.single-work header h1, .single-work header p { color: #2b2d42; }
+.single-work header h1 { text-transform: none; margin: 0; font-weight: 400; }
+.single-work header small { font-size: 0.6em; }
+.single-work header p { padding: 0 10%; }
+.single-work .single-work-presentation { margin-bottom: 80px; }
+.single-work .single-work-presentation img { margin-bottom: 40px; }
+.single-work .single-work-ressources h2 { color: #2b2d42; font-size: 1.3em; margin-bottom: 30px; }
+.single-work .single-work-ressources .ressources-logo { display: flex; flex-direction: column; align-items: center; }
+.single-work .single-work-ressources .ressources-logo svg { width: 100px; height: auto; margin: 0 50px 30px; }
+
+@media (min-width: 769px) { .single-work header { margin: 200px auto 30px; }
+  .single-work header h1 { font-size: 3em; }
+  .single-work .single-work-ressources h2 { font-size: 1.5em; }
+  .single-work .single-work-ressources .ressources-logo { flex-direction: row; justify-content: center; } }
+.video { width: 100%; height: auto; }
+
+.facebook-cover { max-width: 851px; height: 100%; }
+
+.devicon-git-plain { max-width: 2em; }
+
+/* if you want to change the original color */
+.devicon-git-plain path { fill: #4691f6; }
+
+/*# sourceMappingURL=style.css.map */
