@@ -1,0 +1,191 @@
+/********************************************
+					MENU
+********************************************/
+
+#menu {
+	text-align: left;
+    background-color: $purple;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 40px;
+
+    a {
+    	text-decoration: none;
+		color: $white;
+    }
+	
+	#navburger {
+		display: inline-block;
+	    background: $red;
+	    width: 40px;
+	    height: 40px;
+	    text-align: center;
+	    cursor: pointer;
+
+	    span {
+			background: $white;
+			display: block;
+			position: absolute;
+			width: 24px;
+			height: 2px;
+			margin: 0 8px;
+			opacity: 1;
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .25s ease-in-out;
+			transition: .25s ease-in-out;
+
+			&:nth-child(1) {
+				top: 11px;
+			}
+
+			&:nth-child(2) {
+				top: 19px;
+			}
+
+			&:nth-child(3) {
+				top: 27px;
+			}
+		}
+	}
+
+	/* Class toggled by jQuery for menu navburger animation */
+	#navburger.toggled-nav {
+		span {
+			top: 19px;
+
+			&:nth-child(1) {
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+
+	#my-name {
+		position: absolute;
+		width: calc(100% - 80px);
+		margin: 0 40px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    text-align: center;
+    	text-transform: uppercase;
+		color: $white;
+		font-weight: 700;
+
+		a {
+			margin: 0;
+		}
+	}
+
+
+	ul {
+		width: 100%;
+		position: relative;
+		top: -4px;
+		padding: 0;
+		margin: 0;
+		height: 0;
+
+		li {
+			display: block;
+			position: relative;
+			right: 100%;
+			background-color: $purple;
+		    width: 100%;
+		    padding: 25px 0px;
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		    text-align: center;
+
+		    &:first-child {
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				-webkit-transition: right 0.1s ease-in-out;
+				transition: right 0.1s ease-in-out;
+			}
+
+			&:nth-child(2) {
+				-webkit-transition: right 0.2s ease-in-out;
+				transition: right 0.2s ease-in-out
+			}
+
+			&:nth-child(3) {
+				-webkit-transition: right 0.3s ease-in-out;
+				transition: right 0.3s ease-in-out;
+			}
+
+			&:last-child {
+				border: 0;
+				-webkit-transition: right 0.4s ease-in-out;
+				transition: right 0.4s ease-in-out;
+			}
+		}
+	}
+}
+
+
+/* Class toggled by jQuery for menu items */
+.active-item {
+	right: 0 !important;
+}
+
+
+	/**************
+	Menu on desktop
+	**************/
+
+	@media (min-width: 769px) {
+		#menu {
+			width: 340px;
+			top: 100px;
+			height: 50px;
+		
+			#navburger {
+				height: 50px;
+				width: 50px;
+				
+				span {
+					margin: 0 13px;
+
+					&:nth-child(1) {
+						top: 16px;
+					}
+
+					&:nth-child(2) {
+						top: 24px;
+					}
+
+					&:nth-child(3) {
+						top: 32px;
+					}
+				}
+			}
+
+			/* Class toggled by jQuery for menu navburger animation */
+			#navburger.toggled-nav {
+				span {
+					top: 24px;
+				}
+			}
+
+			#my-name {
+				position: absolute;
+				width: calc(100% - 50px);
+				margin: 0;
+			    top: 50%;
+			    left: 50px;
+			    transform: translateY(-50%);
+			}
+		}
+	}
