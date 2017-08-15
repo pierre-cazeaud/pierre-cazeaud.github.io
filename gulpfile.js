@@ -20,7 +20,7 @@ gulp.task("scss", function () {
 
 // Watch asset folder for changes
 gulp.task("watch", ["scss"], function () {
-    gulp.watch("sass/*.scss", ["scss"])
+    gulp.watch("sass/partials/*.scss", ["scss"])
 });
 
 // Set watch as default task
