@@ -198,3 +198,20 @@
 			}
 		}
 	}
+
+	@media (min-width: 1200px) {
+		#menu {
+			width: 340px;
+
+			#my-name {
+			    a:before {
+			    	content: "";
+			    }
+
+			    span {
+			    	display: block;
+			    }
+
+			}
+		}	
+	}
