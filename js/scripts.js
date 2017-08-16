@@ -7,7 +7,7 @@ $(function(){
 });
 
 // GSAP animations
-var homeArrow = document.getElementsByClassName("arrow-nav");
+var homeArrow = document.getElementById("arrow-nav");
 
 homeArrow.onclick = function() {
 	TweenLite.to(window, 1, {scrollTo:{y:"#my-works", offsetY:70}});
