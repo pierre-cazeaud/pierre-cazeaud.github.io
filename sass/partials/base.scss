@@ -449,3 +449,85 @@ Work single pages
 .devicon-git-plain path {
   fill: #4691f6;
 }
+
+
+/*****************
+Contact page
+*****************/
+#contact-page {
+	form {
+		display: flex;
+		flex-flow: row wrap;
+		padding: 20px;
+
+		::-webkit-input-placeholder {
+			color: $purple;
+			opacity: 1 !important;
+		}
+
+		input, textarea {
+			width: 100%;
+			color: $purple;
+			font-family: 'Raleway', sans-serif;
+			background: none;
+			border: 0;
+			border: 2px solid $purple;
+			margin-bottom: 20px;
+			padding: 15px;
+		}
+
+		input[type="text"] {
+			&:first-child {
+				width: calc(50% - 10px);
+				margin-right: 10px;
+			}
+
+			&:nth-child(2) {
+				width: calc(50% - 10px);
+				margin-left: 10px;
+			}
+		}
+
+		textarea {
+			min-height: 120px;
+		}
+
+		.btn {
+			font-family: 'Raleway', sans-serif;
+			margin: 0 auto;
+			background-color: transparent;
+			cursor: pointer;
+
+			&:hover, &:focus {
+				background-color: $purple;
+				color: $white;
+				transition: 0.2s ease-in-out;
+			}
+		}
+	}
+
+
+	@media (min-width: 769px) {
+		form {
+			max-width: 1170px;
+			margin: 0 auto;
+
+			input[type="text"] {
+				&:first-child {
+					width: calc(50% - 20px);
+					margin-right: 20px;
+				}
+
+				&:nth-child(2) {
+					width: calc(50% - 20px);
+					margin-left: 20px;
+				}
+			}
+
+			textarea {
+				min-height: 400px;
+			}
+		}
+	}
+}
+

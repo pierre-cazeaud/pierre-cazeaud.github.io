@@ -7,6 +7,27 @@ Banners
 	margin-top: 40px;
 	height: 200px;
 	margin-bottom: 50px;
+
+	div {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) skewX(-30deg);
+		width: 350px;
+		height: 80px;
+		background: rgba(216, 13, 42, 0.7);
+
+		h1 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: 0;
+			transform: translate(-50%, -50%) skewX(30deg);
+			width: 100%;
+			color: $white;
+		}
+	}
 }
 
 // Banners on desktop
@@ -24,12 +45,15 @@ Home banner
 #home-banner {
 	background: url(../img/banner-home-sm.jpg) center center/cover no-repeat;
 	height: 100vh;
+	text-align: center;
 
 	.banner-content {
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		width: 100%;
+		padding: 0 20px;
 
 		* {
 			color: $purple;
@@ -42,6 +66,29 @@ Home banner
 
 		h2 {
 			font-size: 1em;
+		}
+	}
+
+	.arrow-nav {
+		display: block;
+
+		span {
+			background: #2b2d42;
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			width: 24px;
+			height: 2px;
+		}
+
+		span:first-of-type {
+			transform: translateX(-50%) rotate(45deg);
+			left: calc(50% - 8px);
+		}
+
+		span:last-of-type {
+			transform: translateX(-50%) rotate(-45deg);
+			left: calc(50% + 8px);
 		}
 	}
 }
@@ -68,39 +115,19 @@ Works banner
 ***********/
 #works-banner {
 	background: url(../img/banner-works-sm.jpg) center center/cover no-repeat;
-	
-	div {
-		position: absolute;
-		display: block;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) skewX(-30deg);
-		width: 350px;
-		height: 80px;
-		background: rgba(216, 13, 42, 0.7);
+	@media (min-width: 769px) { background: url(../img/banner-works-md.jpg) center center/cover no-repeat; }
+	@media (min-width: 1200px) { background: url(../img/banner-works-lg.jpg) center center/cover no-repeat; }
+}
 
-		h1 {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin: 0;
-			transform: translate(-50%, -50%) skewX(30deg);
-			width: 100%;
-			color: $white;
-		}
-	}
+/***********
+Contact banner
+***********/
+#contact-banner {
+	background: url(../img/banner-works-sm.jpg) center center/cover no-repeat;
+	@media (min-width: 769px) { background: url(../img/banner-works-md.jpg) center center/cover no-repeat; }
+	@media (min-width: 1200px) { background: url(../img/banner-works-lg.jpg) center center/cover no-repeat; }
 }
 
 
-@media (min-width: 769px) {
-	#works-banner {
-		background: url(../img/banner-works-md.jpg) center center/cover no-repeat;
-	}
-}
-	
-@media (min-width: 1200px) {
-	#works-banner {
-		background: url(../img/banner-works-lg.jpg) center center/cover no-repeat;
-	}
-}
+
 	
