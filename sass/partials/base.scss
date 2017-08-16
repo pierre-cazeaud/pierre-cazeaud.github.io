@@ -458,6 +458,10 @@ Contact page
 	margin-bottom: 50px;
 	text-align: center;
 
+	h2 {
+		color: $purple;
+	}
+
 	form {
 		display: flex;
 		flex-flow: row wrap;
@@ -512,9 +516,6 @@ Contact page
 
 	@media (min-width: 769px) {
 		form {
-			max-width: 1170px;
-			margin: 0 auto;
-
 			input[type="text"] {
 				&:first-child {
 					width: calc(50% - 20px);
