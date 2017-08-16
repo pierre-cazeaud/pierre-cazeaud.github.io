@@ -1,3 +1,4 @@
+// Mobile menu 
 $(function(){
    $("#navburger").click(function(){
    		$("#menu ul li").toggleClass("active-item");
@@ -5,3 +6,9 @@ $(function(){
    });
 });
 
+// GSAP animations
+var homeArrow = document.getElementsByClassName("arrow-nav");
+
+homeArrow.onclick = function() {
+	TweenLite.to(window, 1, {scrollTo:{y:"#my-works", offsetY:70}});
+}
