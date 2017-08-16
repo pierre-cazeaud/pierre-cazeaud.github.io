@@ -14,7 +14,7 @@ Banners
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) skewX(-30deg);
-		width: 350px;
+		width: 230px;
 		height: 80px;
 		background: rgba(216, 13, 42, 0.7);
 
@@ -35,6 +35,10 @@ Banners
 	.banner {
 		margin-top: 0;
 		height: 250px;
+
+		div {
+			width: 350px;
+		}
 	}
 }
 
@@ -70,7 +74,13 @@ Home banner
 	}
 
 	.arrow-nav {
+		position: absolute;
 		display: block;
+		width: 50px;
+		height: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
 
 		span {
 			background: #2b2d42;
