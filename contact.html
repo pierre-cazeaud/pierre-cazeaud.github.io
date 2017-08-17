@@ -13,10 +13,10 @@
 		<h2>Vous avez besoin de mes services ?<br>écrivez-moi !</h2>
 
 		<form id="contact-form" accept-charset="UTF-8" method="POST">
-			<input type="text" name="firstname" placeholder="Prénom"/>
-			<input type="text" name="name" placeholder="Nom"/>
-			<input type="text" name="email" placeholder="Email"/>
-			<textarea name="message" placeholder="Message"></textarea>
+			<input id="firstname" type="text" name="firstname" placeholder="Prénom"/>
+			<input id="name" type="text" name="name" placeholder="Nom"/>
+			<input id="email" type="text" name="email" placeholder="Email"/>
+			<textarea id="message" name="message" placeholder="Message"></textarea>
 
 			<!-- Hidden inputs -->
 			<input type="hidden" name="_next" value="http://pierre-cazeaud.github.io/thanks.html" /> <!-- Setup redirect page -->
@@ -24,12 +24,10 @@
 
 			<button type="submit" class="btn">ENVOYER</button>
 		</form>
-		
-		<!-- Hide email from bots -->
-		<script>
-			var contactform =  document.getElementById('contact-form');
-			contactform.setAttribute('action', 'https://formspree.io/' + 'pierre.cazeaud' + '@' + 'gmail' + '.' + 'com');
-		</script>
+
+		<div id="form-thank-you">
+			<p>Message envoyé !</p>
+		</div>
     </div>
 
 {% include footer.html %}

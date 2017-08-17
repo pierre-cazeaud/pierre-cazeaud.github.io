@@ -1,4 +1,6 @@
-// Mobile menu 
+/*===============
+   Mobile menu
+===============*/
 $(function(){
    $("#navburger").click(function(){
    		$("#menu ul li").toggleClass("active-item");
@@ -47,3 +49,40 @@ tl_main
   .to(letters_2, 0, { display: 'none' }, "+=1")
   .to(cursor, 0.5, { opacity: 1, repeat: 5, repeatDelay: 0.7 })
   .to(cursor, 0.5, { opacity: 0 })
+
+
+
+/*=========================
+	  FORM VALIDATION
+=========================*/
+
+$(document).ready(function() {
+
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Get fiels value
+        var firstname = $('#firstname').val();
+        var name 	  = $('#name').val();
+        var email 	  = $('#email').val();
+        var message   = $('#message').val();
+
+        // Send to Formspree
+        $.ajax({
+            url:'https://formspree.io/pierre.cazeaud@gmail.com',
+            method:'POST',
+            data:{
+            	firstname: firstname,
+                name: name,
+                _replyto: email,
+                 email: email,
+                message: message,
+                _subject:'Portfolio - Nouveau message',
+            },
+            dataType:"json",
+            success:function() {
+                $('#form-thank-you').show();
+            }   
+        });     
+    });
+}); 
