@@ -193,54 +193,32 @@ Home page
 }
 
 #contact {
-	background: url(../img/banner-home-contact-sm.jpg) center center no-repeat;
-	background-size: cover;
+    position: relative;
+	background: url(../img/banner-home-contact-sm.jpg) center center/cover no-repeat;
 	width: 100%;
-	padding: 20px 15px 30px;
-	margin-bottom: -20px;
+	min-height: 200px;
 	text-align: center;
+	margin: 0;
 
-	.main-block-subtitle {
-		color: $white;
-		margin-bottom: 30px;
+	div {
+		position: absolute;
+		width: 100%;
+		padding: 0 20px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	h3 {
+		margin: 0 0 30px;
 	}
 }
 
 @media (min-width: 769px) {
-	#my-works {
-	    min-height: 640px;
-
-	    .btn {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
-
 	#contact {
-		background: url(../img/banner-home-contact-lg.jpg) center center no-repeat;
-		height: 300px;
-		padding: 70px 15px 30px;
-
-		.main-block-subtitle {
-			margin-bottom: 50px;
-		}
+		background: url(../img/banner-home-contact-lg.jpg) center center/cover no-repeat;
 	}
 }
-
-@media (min-width: 992px) {
-	#my-works {
-		min-height: 765px;
-	}
-}
-
-@media (min-width: 1200px) {
-	#my-works {
-		min-height: 890px;
-	}
-}
-
 		
 
 
