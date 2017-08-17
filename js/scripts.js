@@ -12,7 +12,6 @@ $(function(){
 
 // Home header arrow scrolling animation
 var homeArrow = document.getElementById("arrow-nav");
-console.log(homeArrow);
 
 homeArrow.onclick = function() {
 	TweenLite.to(window, 1, {scrollTo:{y:"#my-works", offsetY:30}});
